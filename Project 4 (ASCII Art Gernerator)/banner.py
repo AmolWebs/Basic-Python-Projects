@@ -10,15 +10,15 @@ def clear_screen():
 
 # Banner maker
 def aciimaker():
-    clear_screen()
+    clear_screen()    
     print('-' * 70)
     ascii_banner = pyfiglet.figlet_format("A C I I banner").upper()
     print(colored(ascii_banner.rstrip("\n"), 'red', attrs=['bold']))
     print(colored("     -by prajsh8484      \n", 'yellow', attrs=['bold']))
     print('-' * 70)
     
-    text = input("\nEnter Your Text: ")
-    color = input("Enter Your Colour (grey, red, green, yellow, blue, magenta, cyan, white): ")
+    text = input(colored("\nEnter Your Text: ", 'green',attrs=['bold']))
+    color = input(colored("Enter Your Colour (grey, red, green, yellow, blue, magenta, cyan, white): ",'green',attrs=['bold']))
     colorlist = ['grey', 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white']
     
     baner = pyfiglet.figlet_format(f"{text}").upper()
@@ -35,12 +35,19 @@ def aciimaker():
 # Ending message
 def ending():
     print("\n\nThanks for using the code :)\n")
-    a = input("Do you want to run the program again? (y for yes) (any key for no): ")
+    a = input(colored("Do you want to run the program again? (y for yes) (any key for no): ",'green',attrs=['bold']))
     if a.lower() == 'y':
         return True
     else:
-        print("Exiting Program...")
-        sleep(3)
+        print("Exiting Program .",end="")
+        sleep(1)
+        print(" .",end="")
+        sleep(1)
+        print(" .",end="")
+        sleep(1)
+        print(" .",end="")
+        sleep(1)
+        print(" .")
         sys.exit()
 
 # Main loop
