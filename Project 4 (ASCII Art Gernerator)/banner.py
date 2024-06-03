@@ -10,7 +10,7 @@ def clear_screen():
 
 # Banner maker
 def aciimaker():
-    clear_screen()    
+    clear_screen()
     print('-' * 70)
     ascii_banner = pyfiglet.figlet_format("A C I I banner").upper()
     print(colored(ascii_banner.rstrip("\n"), 'red', attrs=['bold']))
